@@ -54,9 +54,11 @@ def gerar_relatorio(resultados, recuperacao, top_student, maior_media):
         f.write(f"\nRecuperação: {txt_rec}")
         f.write(f"\n\nMelhor Aluno: {top_student} ({maior_media:.2f})")
 
-# Fluxo de execução corrigido
-dados_limpos = tratar_notas(notas_alunos)
-res, rec, top, nota = processar_alunos(dados_limpos)
-gerar_relatorio(res, rec, top, nota)
+def executar_processamento(lista_notas):
+    if not lista_notas:
+        raise ValueError("Lista de alunos vazia ou inválida.")
 
-print("Relatório gerado com sucesso!")
+    dados_limpos = tratar_notas(lista_notas)
+    res, rec, top, nota = processar_alunos(dados_limpos)
+    
+    return res, rec, top, nota

@@ -1,0 +1,14 @@
+RELATÓRIO DE DESEMPENHO
+=========================
+Guilherme: 8.25
+Lucas: 7.90
+Otávio: 3.60
+Rodrigo: 8.25
+Fernando: 9.50
+Jéssica: 8.00
+Gabriella: 9.00
+Igor: 5.35
+
+Recuperação: Otávio, Igor
+
+Melhor Aluno: Fernando (9.50)
