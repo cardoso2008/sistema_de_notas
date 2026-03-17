@@ -4,6 +4,28 @@ notas_alunos = [("Guilherme", [10, 9.5, 6.5, 10, 5.5, 8],
                  "Rodrigo", [7, 9.5, 8, 9.0, 6, 10],
                  "Fernando", [10, 10, 9.5, 9, 8.5, 10],
                  "Jéssica", [9, 8.5, 9.5, "iurfgw", 8, 5])]
+
+def tratar_notas(lista_notas):
+    resultado = {}
+    
+    dados = lista_notas[0]
+
+    for i in range(0, len(dados), 2):
+        nome = dados[i]
+        notas_sujas = dados[i+1]
+        notas_limpas = []
+        
+        for nota in notas_sujas:
+            try:
+                valor = float(nota)
+                if 0 <= valor <= 10:
+                    notas_limpas.append(valor)
+            except (ValueError, TypeError): #trata strings
+                continue
+        
+        resultado[nome] = notas_limpas
+            
+    return resultado
                  
 def calcular_media(lista_notas):
     if not lista_notas:
