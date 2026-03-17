@@ -5,3 +5,4 @@ notas_alunos = [("Guilherme", [10, 9.5, 6.5, 10, 5.5, 8],
                  "Fernando", [10, 10, 9.5, 9, 8.5, 10],
                  "Jéssica", [9, 8.5, 9.5, "iurfgw", 8, 5])]
                  
+
