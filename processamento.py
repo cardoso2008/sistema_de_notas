@@ -7,4 +7,5 @@ def gerar_relatorio(resultados, recuperacao, top_student, maior_media):
         f.write("\nRecuperação:\n" + ", ".join(recuperacao) if recuperacao else "Nenhum")
         f.write(f"\n\nMelhor Aluno: {top_student} ({maior_media:.2f})")
 
-gerar_relatorio(resultados, recuperacao, top_student, maior_media)
+res, rec, top, nota = processar_alunos(dados_tratados)
+gerar_relatorio(res, rec, top, nota)
